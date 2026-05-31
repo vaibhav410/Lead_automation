@@ -1,0 +1,169 @@
+{
+  "name": "automation leads",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "lead-form",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -1152,
+        -432
+      ],
+      "id": "b896bff9-2911-4d1b-8e9b-f826fde0f4fa",
+      "name": "Webhook",
+      "webhookId": "8cea0d64-14fd-4bc6-8716-418c2a17a898"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1kHwU7qsSHlcy_YqcJxTEO0SBY838kjhrVyj1FFNPh-Q",
+          "mode": "list",
+          "cachedResultName": "Lead Database",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kHwU7qsSHlcy_YqcJxTEO0SBY838kjhrVyj1FFNPh-Q/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1kHwU7qsSHlcy_YqcJxTEO0SBY838kjhrVyj1FFNPh-Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "name": "Vaibhav",
+            "email": "vkkanojia079@gmail.com",
+            "phone no ": "9898909910"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "phone no ",
+              "displayName": "phone no ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -848,
+        -320
+      ],
+      "id": "2cf21230-972d-4dfa-b218-35f26b060d8d",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "VpQPjcdZEUZVW1Kd",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{$json.email}}",
+        "subject": "Lead Registration Confirmation",
+        "emailType": "text",
+        "message": "Hello,  Thank you for your interest.  We have successfully received your details and our team will contact you shortly.  Best Regards, Earthonoid AI Automation Team",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        -512,
+        -496
+      ],
+      "id": "b66ab7e9-8679-4138-8946-7d9b2083e0d6",
+      "name": "Send a message",
+      "webhookId": "9acf94b2-07bc-47d6-b5fd-f93b9b0ee4c2",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "pMwNDNJR8n2EdJ8o",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "Name": "Vaibhav",
+          "Email": "vkkanojia079@gmail.com",
+          "Phone": "9876543210"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "53e690a8-811f-4ded-b6df-3d7035802c68",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "803f51bdd3ab08acc58d914f06cbb758bf1b4d207e9d95fad2dd22cc0749b126"
+  },
+  "id": "dFtQLeGlq03OaNw4",
+  "tags": []
+}
