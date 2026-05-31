@@ -19,7 +19,7 @@
 | Gmail screenshot | ✅ Present | `screenshots/gmail_confirmation.png` |
 | Webhook test screenshot | ❌ Missing | Add `screenshots/webhook_test.png` |
 | Execution detail screenshot | ⚠ Recommended | Add `screenshots/execution_success.png` |
-| Demo video | ⚠ Pending | Upload `demo-video/demo_video.mp4` |
+| Demo video | ✅ Present | [Google Drive link](https://drive.google.com/file/d/1jTqRmZyaEI6GLbaSTA4uZdTyfU998jhe/view?usp=sharing) |
 
 ---
 
@@ -40,13 +40,12 @@
 ## Pre-Push Git Steps
 
 1. [ ] Add missing screenshots (webhook test, execution panel)  
-2. [ ] Record demo video using `demo-video/demo_script.md`  
-3. [ ] Place video at `demo-video/demo_video.mp4`  
-4. [ ] Review README image links render on GitHub  
-5. [ ] Confirm no secrets in JSON (credentials are ID references only)  
-6. [ ] Optional: fix Google Sheets dynamic field mapping in n8n, re-export JSON  
-7. [ ] `git add .` → `git commit` → `git push`  
-8. [ ] Submit repository URL to Earthonoid  
+2. [x] Demo video uploaded to Google Drive  
+3. [ ] Review README image links render on GitHub  
+4. [ ] Confirm no secrets in JSON (credentials are ID references only)  
+5. [ ] Optional: fix Google Sheets dynamic field mapping in n8n, re-export JSON  
+6. [ ] `git add .` → `git commit` → `git push`  
+7. [ ] Submit repository URL to Earthonoid  
 
 ---
 

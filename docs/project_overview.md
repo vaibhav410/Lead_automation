@@ -182,7 +182,7 @@ Linear topology: no branches, merges, or loops. Simple and maintainable.
 | Sheet screenshot | `screenshots/google_sheet_updated.png` |
 | Email screenshot | `screenshots/gmail_confirmation.png` |
 | Demo script | `demo-video/demo_script.md` |
-| Demo recording | `demo-video/demo_video.mp4` (to be uploaded) |
+| Demo recording | [Google Drive — Screen Recording](https://drive.google.com/file/d/1jTqRmZyaEI6GLbaSTA4uZdTyfU998jhe/view?usp=sharing) |
 
 ---
 

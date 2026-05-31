@@ -149,11 +149,13 @@ curl -X POST "https://YOUR-N8N-INSTANCE/webhook/lead-form" \
 
 ## Demo Video
 
-Place your screen recording here:
+**Watch the full demonstration:** [**Lead Automation Demo (Google Drive)**](https://drive.google.com/file/d/1jTqRmZyaEI6GLbaSTA4uZdTyfU998jhe/view?usp=sharing)
 
-- **Folder:** [`demo-video/`](./demo-video/)
-- **Suggested filename:** `demo_video.mp4`
-- **Script:** [`demo-video/demo_script.md`](./demo-video/demo_script.md)
+| Resource | Link |
+|----------|------|
+| Demo video | [Google Drive — Screen Recording](https://drive.google.com/file/d/1jTqRmZyaEI6GLbaSTA4uZdTyfU998jhe/view?usp=sharing) |
+| Demo script | [`demo-video/demo_script.md`](./demo-video/demo_script.md) |
+| Demo folder | [`demo-video/`](./demo-video/) |
 
 ---
 
@@ -219,8 +221,8 @@ Lead_automation/
 │   ├── webhook_test.png          (recommended)
 │   └── execution_success.png     (recommended)
 ├── demo-video/
-│   ├── demo_script.md
-│   └── demo_video.mp4            (upload your recording)
+│   ├── README.md                 (Google Drive video link)
+│   └── demo_script.md
 └── docs/
     └── project_overview.md
 ```
